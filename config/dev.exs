@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :rent_cars, RentCars.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "123",
   database: "rent_cars_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
