@@ -1,0 +1,4 @@
+export SECRET_KEY_BASE=*****
+export DATABASE_URL=*****
+export PHX_SERVER=*****
+export PHX_HOST=*****
