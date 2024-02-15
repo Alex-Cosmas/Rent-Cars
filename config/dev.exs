@@ -2,10 +2,10 @@ import Config
 
 # Configure your database
 config :rent_cars, RentCars.Repo,
-  # username: "mac",
-  # password: "123",
-  username: "stxxyqtn",
-  password: "mX5AfN0TjyMDOgj1L3h2oKYexdbcpF4X",
+  username: "postgres",
+  password: "123",
+  # username: "stxxyqtn",
+  # password: "mX5AfN0TjyMDOgj1L3h2oKYexdbcpF4X",
   database: "rent_cars_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
