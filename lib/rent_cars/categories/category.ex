@@ -17,5 +17,11 @@ defmodule RentCars.Categories.Category do
     |> cast(attrs, @fields)
     |> unique_constraint(:name)
     |> validate_required(@fields)
+    |> update_change(:name, &String.upcase/1)
+
+    # |> update_change(:name, fn e ->
+    #   String.upcase(e)
+    #   IO.inspect(e)
+    # end)
   end
 end

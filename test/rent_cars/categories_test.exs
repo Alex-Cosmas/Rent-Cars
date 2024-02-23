@@ -10,7 +10,7 @@ defmodule RentCars.CategoriesTest do
   test "create_category/1 with valid data" do
     attrs = %{description: "pumpkin 123", name: "sport"}
     assert {:ok, %Category{} = category} = Categories.create_category(attrs)
-    assert category.name == attrs.name
+    assert category.name == String.upcase(attrs.name)
     assert category.description == attrs.description
   end
 
