@@ -6,4 +6,10 @@ defmodule RentCars.Categories do
     # [%{description: "Category Description", id: "123123", name: "SPOT"}]
     Repo.all(Category)
   end
+
+  def create_category(attrs) do
+    attrs
+    |> Category.changeset()
+    |> Repo.insert()
+  end
 end
