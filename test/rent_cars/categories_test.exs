@@ -27,4 +27,31 @@ defmodule RentCars.CategoriesTest do
     assert "can't be blank" in errors_on(changeset).description
     assert %{description: ["can't be blank"]} = errors_on(changeset)
   end
+
+  test "get_category/1" do
+    attrs = %{description: "punmpkin 123", name: "sport"}
+    {:ok, category} = Categories.create_category(attrs)
+    assert Categories.get_category(category.id) == category
+  end
+
+  test "update_category/2" do
+    attrs = %{description: "punmpkin 123", name: "sport"}
+    {:ok, category} = Categories.create_category(attrs)
+    {:ok, category_updated} = Categories.update_category(category, %{name: "SUV"})
+    assert category_updated.name == "SUV"
+  end
+
+  test "update_category/2" do
+    attrs = %{description: "punmpkin 123", name: "sport"}
+    {:ok, category} = Categories.create_category(attrs)
+    {:ok, category_updated} = Categories.update_category(category, %{name: "SUV"})
+    assert category_updated.name == "SUV"
+  end
+
+  test "delete_category/1" do
+    attrs = %{description: "punmpkin 123", name: "sport"}
+    {:ok, category} = Categories.create_category(attrs)
+    {:ok, category_updated} = Categories.delete_category(category)
+    assert category_updated.name == nil
+  end
 end
