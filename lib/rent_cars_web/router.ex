@@ -23,8 +23,9 @@ defmodule RentCarsWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api", RentCarsWeb.Api, as: :api do
     pipe_through :api
-
     get "/categories", CategoryController, :index
+    post "/categories", CategoryController, :create
+    get "/categories/:id", CategoryController, :show
   end
 
   # coveralls-ignore-start
