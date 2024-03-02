@@ -13,8 +13,8 @@ defmodule RentCars.Categories do
     |> Repo.insert()
   end
 
-  def get_category(id) do
-    Repo.get(Category, id)
+  def get_category!(id) do
+    Repo.get!(Category, id)
   end
 
   def update_category(category, attrs) do
