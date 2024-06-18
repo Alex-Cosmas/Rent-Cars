@@ -29,20 +29,20 @@ defmodule RentCars.CategoriesTest do
   end
 
   test "get_category/1" do
-    attrs = %{description: "punmpkin 123", name: "sport"}
+    attrs = %{description: "pumpkin 123", name: "sport"}
     {:ok, category} = Categories.create_category(attrs)
     assert Categories.get_category!(category.id) == category
   end
 
   test "update_category/2" do
-    attrs = %{description: "punmpkin 123", name: "sport"}
+    attrs = %{description: "pumpkin 123", name: "sport"}
     {:ok, category} = Categories.create_category(attrs)
     {:ok, category_updated} = Categories.update_category(category, %{name: "SUV"})
     assert category_updated.name == "SUV"
   end
 
   test "delete_category/1" do
-    attrs = %{description: "punmpkin 123", name: "sport"}
+    attrs = %{description: "pumpkin 123", name: "sport"}
     {:ok, category} = Categories.create_category(attrs)
 
     {:ok, %Category{}} = Categories.delete_category(category)
@@ -51,7 +51,7 @@ defmodule RentCars.CategoriesTest do
 end
 
 # test "update_category/2" do
-#   attrs = %{description: "punmpkin 123", name: "sport"}
+#   attrs = %{description: "pumpkin 123", name: "sport"}
 #   {:ok, category} = Categories.create_category(attrs)
 #   {:ok, category_updated} = Categories.update_category(category, %{name: "SUV"})
 #   assert category_updated.name == "SUV"
